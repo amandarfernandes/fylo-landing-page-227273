@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+:root {
+  --accent: hsl(163, 95%, 43%);
+  --neutral:hsl(0, 0%, 50%);
+  --softblue: hsl(243, 86%, 85%);
+  --darkblue: hsl(243, 87%, 12%);
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight:400;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.hero {
+    background-image: url(images/bg-intro.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    width:100vw;
+    padding: 3em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img {
+  width: 90%;
+  height: auto;
+  max-width: 400px;
+  margin: 4em auto;
+
+  display: inline-block;
+  text-align: center;
+}
+
+svg {
+  fill:white;
+}
+
+.main-nav {
+  width:100%;
+  position: absolute;
+  padding: 1em 2em;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-footer {
+  width:100%;
+}
+
+.main {
+  width:100vw;
+  padding: 2em 1em;
+
+}
+
+#fylo {
+  fill: white;
+}
+.main-nav__social {
+  display: flex;
+}
+.main-nav__social li {
+    list-style: none;
+    margin-left: 1.2em ;
+}
+
+.main-nav__social i {
+  font-size: 1.32em;
+  color: white;
+}
+
+.main__title {
+    color: hsl(243, 87%, 12%);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+  }
+
+.main__text {
+
+  font-family: "open sans", sans-serif;
+  font-size: 1em;
+  color: var(--neutral);
+  padding: 2em 0;
+}
+  .subscribe__form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+  }
+
+  .subscribe__title {
+    color: hsl(243, 87%, 12%);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+
+  }
+  .subscribe__email {
+    border-radius: 4px;
+    line-height: 2em;
+    width:100%;
+    max-width: 350px;
+    margin: 1em 0;
+}
+  .subscribe__link {
+    background-color: var(--accent);
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 2em;
+    border:0px;
+    padding: .5em 3em;
+  }
+
+.footer__link { display: block; width: 100%; font-size: 1em;  text-align: right;padding-right:2em;}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media only screen and (min-width: 750px) {
+
+  body {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows:  100px auto 50px;
+  }
+
+header {
+    grid-column: 1;
+    grid-row: 1 / 4;
+    width: 50vw;
+}
+.hero {
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(var(--darkblue),var(--softblue));
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#fylo {
+  fill: #000;
+}
+
+.main-nav {
+  width: 50vw;
+  right:0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 2.5em;
+  background:none;
+}
+
+.main-footer {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.main {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: center;
+  width:50%;
+  max-width:550px;
+   width:50vw;
+  padding: 2.5em;
+}
+
+.main-nav__social {
+  display: flex;
+}
+.main-nav__social li {
+    list-style: none;
+    margin-left: 1.2em ;
+}
+
+.main-nav__social i {
+  font-size: 1.2em;
+  color:black;
+}
+
+.main__title {
+    color: hsl(243, 87%, 12%);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+  }
+
+.main__text {
+  font-family: "open sans", sans-serif;
+  font-size: 1em;
+  color: var(--neutral);
+
+  padding: 2em 0;
+}
+  .subscribe__form {
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+
+  .subscribe__title {
+    width: 100%;
+    padding-bottom: 1em;
+  }
+  .subscribe__email {
+    width: 50%  ;
+    padding:0.2em;
+    margin:0;
+}
+  .subscribe__link {
+    background-color: var(--accent);
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 2em;
+    border:0px;
+    width: 45%;
+    padding: .2em;
+  }
+
+.footer__link { display: block; width: 100%; font-size: 0.85em;  text-align: right; padding-right:2em;margin-bottom: 1em;}
+
+}
